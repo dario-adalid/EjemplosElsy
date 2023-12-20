@@ -18,45 +18,52 @@ esMayorDeEdad(57)
 /// Ejercicio 1. Completa la funcion para que verifique
 /// si la contraseña es igual a la contraseña del usuario
 
-// function contraseñaValida(contraseñaIntroducida){
-//     const contrseñaDelUsuario = "abc123"
-//     if(/*¿Que comparación tenemos que poner aquí?*/){
-//         console.log("contraseña válida")
-//     }
-//     else{
-//         console.log("contraseña inválida")
-//     }
-// }
-
+ function contraseñaValida(contraseñaIntroducida){
+     const contraseñaDelUsuario = "abc123"
+     if(contraseñaIntroducida === contraseñaDelUsuario){
+         console.log("contraseña válida")
+     }
+     else{
+         console.log("contraseña inválida")
+     }
+ }
 // contraseñaValida("hola")
 // contraseñaValida("abc123")
-
 
 /// Ejercicio 2. Completa la siguiente función para determinar
 /// si el número introducido es par o impar
 
-// function esParOImpar(numero){
-//     if(/*Recuerda utilizar el operador módulo*/ ){
-//         console.log(`${numero} es par`)
-//     }
-//     else{
-//         console.log(`${numero} es impar`)
-//     }
-// }
+ function esParOImpar(numero){
+    if(numero % 2 === 0) {
+         console.log(`${numero} es par`) 
+    }
+    else{
+        console.log(`${numero} es impar`)
+     }
+ }
 
-// esParOImpar(2)
-// esParOImpar(3)
-// esParOImpar(-17)
+ esParOImpar(2)
+ esParOImpar(3)
+ esParOImpar(-17)
 
 /// Ejercicio 3. Crea una función que devuelva el precio
 /// de un artículo a partir de saber si incluye IVA (16%)
 /// o no
 
-// function precioDespuesIva(precio, contieneIVA){
-//     /*Recuerda utilizar el if para ver si contiene
-//     IVA y también devolver el valor con return */
-// }
+ function precioDespuesIva(precio, contieneIVA){
+    if (contieneIVA) {
+        // Si contiene IVA (16%)
+        const precioConIVA = precio + (precio * 0.16);
+        return precioConIVA;
 
+    }else {
+        // Si no contiene IVA
+        return precio;
+   
+    /*Recuerda utilizar el if para ver si contiene
+    IVA y también devolver el valor con return */
+ }
+}
 // let precio1 = precioDespuesIva(150, false)
 // console.log(precio1)
 
@@ -88,36 +95,43 @@ imprimirNumeros(18)
 /// Ejercicio 1. Completa la función para que muestre los números
 /// desde el que nos pida el usuario hasta el 0
 
-// function contarEnReversa(numero){
-//     for(let i = /*¿En qué valor inicializamos i?*/; numero /*¿Qué comparación debemos hacer? Recuerda incluir el cero al imprimir*/ */ 0; /*¿Qué operación debemos realizar?*/){
-//         console.log(numero)
-//     }
-// }
+ function contarEnReversa(numero){
+     for(let i = numero; i >= 0; i--){
+        console.log(i)
+    }
+ }
 
-// contarEnReversa(15)
+ contarEnReversa(15)
 
 /// Ejercicio 2. Completa una función para imprimir cada letra de la
 /// cadena de texto en una línea separada
 
-// function deletrearPalabra(texto){
-//     for(/*TIP: Recuerda que la propiedad length nos da el tamaño de la cadena de texto*/){
-//         console.log(texto.charAt(i))
-//     }
-// }
+ function deletrearPalabra(texto){
+    for (let i = 0; i < texto.length; i++){
+         console.log(texto.charAt(i))
+    }
+ }
 
-// deletrearPalabra("hola")
-// deletrearPalabra("familiar")
-// deletrearPalabra("programacion")
+ deletrearPalabra("hola")
+deletrearPalabra("familiar")
+ deletrearPalabra("programacion")
 
 /// Ejercicio 3. Haz una función que imprima los números del 1 hasta
 /// el que haya ingresado el usuario, pero en vez de imprimir los 
 /// números que sean divisibles entre 3 imprima la palabra `buzz`
 
-// function imprimeBuzz(numero){
+ function imprimeBuzz(numero){
+for(let i = 1; i<= numero; i++){
+    if (i % 3 === 0){
+        console.log("buzz");
+        
+    }else{
+        console.log (i);
+    }
+}
+}
 
-// }
-
-// imprimeBuzz(15)
+ imprimeBuzz(15)
 /*
 Resultado esperado
 1
